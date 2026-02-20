@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unified AI Automation System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Unified AI + Cyber + Business Automation System</h1>
+        <button id="toggle-mode">Toggle Dark Mode</button>
+        <button id="export-report">Export Report</button>
+    </header>
+    <nav class="tabs">
+        <button class="tab-btn active" data-module="cyber">Cybersecurity Monitor</button>
+        <button class="tab-btn" data-module="ops">Business Ops Manager</button>
+        <button class="tab-btn" data-module="leads">Lead & Outreach System</button>
+    </nav>
+    <main class="container">
+        <!-- Cybersecurity Module -->
+        <section id="cyber-module" class="module active">
+            <h2>Cybersecurity Monitor</h2>
+            <button id="manual-scan">Manual Threat Scan</button>
+            <table id="cyber-logs">
+                <thead><tr><th>Timestamp</th><th>Threat Level</th><th>Message</th></tr></thead>
+                <tbody></tbody>
+            </table>
+            <canvas id="cyber-chart" height="200"></canvas>
+        </section>
+        <!-- Ops Module -->
+        <section id="ops-module" class="module">
+            <h2>Business Ops Manager</h2>
+            <form id="ops-form">
+                <input type="text" id="ops-input" placeholder="Enter task description..." required>
+                <button type="submit">Submit Task</button>
+            </form>
+            <table id="ops-tasks">
+                <thead><tr><th>Timestamp</th><th>Priority</th><th>Routed To</th><th>Description</th></tr></thead>
+                <tbody></tbody>
+            </table>
+            <canvas id="ops-chart" height="200"></canvas>
+        </section>
+        <!-- Leads Module -->
+        <section id="leads-module" class="module">
+            <h2>Lead & Outreach System</h2>
+            <form id="leads-form">
+                <input type="text" id="leads-input" placeholder="Enter message..." required>
+                <button type="submit">Process Message</button>
+            </form>
+            <table id="leads-table">
+                <thead><tr><th>Timestamp</th><th>Leads</th><th>Outreach Sent</th></tr></thead>
+                <tbody></tbody>
+            </table>
+            <canvas id="leads-chart" height="200"></canvas>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Unified Automation Demo | Flagship Portfolio Project</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
